@@ -10,15 +10,27 @@
   "scripts": {
     "dev": "concurrently -n backend,frontend \"npm run dev -w @collab-board/backend\" \"npm run dev -w @collab-board/frontend\"",
     "build": "npm run build -w @collab-board/backend && npm run build -w @collab-board/frontend",
-    "lint": "npm run lint -w @collab-board/backend && npm run lint -w @collab-board/frontend",
-    "test": "npm run test -w @collab-board/backend && npm run test -w @collab-board/frontend",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "echo \"No tests yet\"",
     "clean": "rimraf node_modules packages/*/node_modules packages/*/dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.1",
+    "@typescript-eslint/parser": "^8.39.1",
     "concurrently": "^9.2.0",
-    "rimraf": "^6.0.1"
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-vue": "^10.4.0",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "typescript-eslint": "^8.39.1"
   }
 }
