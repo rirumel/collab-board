@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2022",                 // modern JS output
+    "module": "ESNext",                 // ESM
+    "moduleResolution": "node",
+    "outDir": "dist",                   // compiled files go here
+    "rootDir": "src",                   // source files
+    "strict": true,                     // enable strict TS checks
+    "esModuleInterop": true,            // for default imports of CJS modules
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"]
+}

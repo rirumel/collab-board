@@ -8,8 +8,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently -n backend,frontend \"npm run dev -w @collab-board/backend\" \"npm run dev -w @collab-board/frontend\"",
-    "build": "npm run build -w @collab-board/backend && npm run build -w @collab-board/frontend",
+    "dev": "concurrently -n backend,frontend \"tsc -b packages/backend --watch\" \"npm run dev -w @collab-board/frontend\"",
+    "build": "tsc -b packages/backend && npm run build -w @collab-board/frontend",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
@@ -31,6 +31,8 @@
     "globals": "^16.3.0",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.9.2",
     "typescript-eslint": "^8.39.1"
   }
 }

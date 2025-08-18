@@ -1,4 +1,10 @@
 {
+  "extends": "../../tsconfig.base.json", 
+  "compilerOptions": { 
+    "composite": true, 
+    "types": ["vite/client"] 
+  }, 
+  "include": ["src/**/*", "env.d.ts"],
   "files": [],
   "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
 }
